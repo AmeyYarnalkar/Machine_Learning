@@ -1,0 +1,93 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    height: 100vh;
+    background: #0d0d0d;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container Card */
+.container {
+    background: #1a1a1a;
+    padding: 40px;
+    border-radius: 12px;
+    width: 400px;
+    text-align: center;
+
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+}
+
+/* Heading */
+h1 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+/* Form Inputs */
+input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+
+    border: 1px solid #333;
+    border-radius: 6px;
+
+    background: #0d0d0d;
+    color: #ffffff;
+
+    font-size: 14px;
+}
+
+/* Input focus */
+input:focus {
+    outline: none;
+    border-color: #ffffff;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+
+    background: #ffffff;
+    color: #000000;
+
+    border: none;
+    border-radius: 6px;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* Button hover */
+button:hover {
+    background: #e6e6e6;
+    transform: scale(1.02);
+}
+
+/* Result Box */
+.result {
+    margin-top: 20px;
+    padding: 15px;
+
+    background: #0d0d0d;
+    border: 1px solid #333;
+    border-radius: 6px;
+
+    font-size: 18px;
+}

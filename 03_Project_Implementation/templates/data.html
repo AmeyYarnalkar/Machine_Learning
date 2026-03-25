@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Prediction</title>
+
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Forest Fire Prediction</h1>
+
+      <form action="{{ url_for('predict') }}" method="POST">
+        <input
+          type="number"
+          step="any"
+          name="temperature"
+          placeholder="Temperature"
+          required
+        />
+        <input
+          type="number"
+          step="any"
+          name="rh"
+          placeholder="Relative Humidity"
+          required
+        />
+        <input
+          type="number"
+          step="any"
+          name="rain"
+          placeholder="Rain"
+          required
+        />
+         <input
+          type="number"
+          step="any"
+          name="dc"
+          placeholder="Drought Count"
+          required
+        />
+         <input
+          type="number"
+          step="any"
+          name="bui"
+          placeholder="Buildup Index"
+          required
+        />
+        <input
+          type="number"
+          step="any"
+          name="ffmc"
+          placeholder="FFMC"
+          required
+        />
+        <input type="number" step="any" name="dmc" placeholder="DMC" required />
+        <input type="number" step="any" name="isi" placeholder="ISI" required />
+        <input
+          type="number"
+          step="any"
+          name="classes"
+          placeholder="Classes (0/1)"
+          required
+        />
+        <input
+          type="number"
+          step="any"
+          name="region"
+          placeholder="Region (0/1)"
+          required
+        />
+
+        <button type="submit">Predict</button>
+      </form>
+
+      {% if result %}
+      <div class="result">Prediction: {{ result }}</div>
+      {% endif %}
+    </div>
+  </body>
+</html>
